@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import style from '../styles/HeaderMenu.module.css';
+import ChangeLang from './ChangeLang';
 
 const headerMenu = () => {
     const links = [
@@ -22,11 +23,12 @@ const headerMenu = () => {
                     alt="Logo" 
                 />
             </div>
-            <ul className={style.containerHeaderLinks}>
+            <div className={style.containerHeaderLinks}>
                 {links.map((link) => (
                     <button key={link.label} onClick={() => {redirectTo(link.url)}}>{link.label}</button>
                 ))}
-            </ul>
+                <ChangeLang />
+            </div>
       </nav>
     )
 }
