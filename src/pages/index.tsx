@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 import HeaderMenu from '@/components/HeaderMenu'
+import SendMessage from '@/components/Home/SendMessage'
+import ChatNow from '@/components/Home/ChatNowButton'
 
 export default function Home() {
   return (
@@ -17,6 +19,10 @@ export default function Home() {
       </Head>
       <main>
         <HeaderMenu />
+      </main>
+      <main>
+        <SendMessage />
+        <ChatNow/>
       </main>
     </>
   )
