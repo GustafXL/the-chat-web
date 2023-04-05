@@ -18,10 +18,15 @@
 
 .containerHeaderLinks {
     display: flex;
-    /* width: 100%; */
-    /* max-width: 100%; */
     justify-content: space-around;
+    align-items: center;
+}
 
+.containerHeaderLinks button{
+    display: flex;
+    margin: 0 20px;
+    background: none;
+    border: none;
 }
 
 .imageLogo {
