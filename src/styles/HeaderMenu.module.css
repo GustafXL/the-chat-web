@@ -1,0 +1,31 @@
+.containerHeaderMenu {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    background-color: --light-color-theme;
+}
+
+.containerImageLogo {
+    display: flex;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    align-items: center;
+    justify-content: center;
+}
+
+.containerHeaderLinks {
+    display: flex;
+    /* width: 100%; */
+    /* max-width: 100%; */
+    justify-content: space-around;
+
+}
+
+.imageLogo {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
