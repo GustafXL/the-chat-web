@@ -15,21 +15,23 @@ const headerMenu = () => {
     }
 
     return (
-        <nav className={`${style.containerHeaderMenu} default-container`}>
-            <div className={style.containerImageLogo}>
-                <img
-                    className={style.imageLogo} 
-                    src='/img/logo.png' 
-                    alt="Logo" 
-                />
-            </div>
-            <div className={style.containerHeaderLinks}>
-                {links.map((link) => (
-                    <button key={link.label} onClick={() => {redirectTo(link.url)}}>{link.label}</button>
-                ))}
-                <ChangeLang />
-            </div>
-      </nav>
+        <div className={style.containerHeaderMenu}>
+            <nav className={`${style.boxHeaderMenu} default-container`}>
+                <div className={style.containerImageLogo}>
+                    <img
+                        className={style.imageLogo} 
+                        src='/img/logo.png' 
+                        alt="Logo" 
+                        />
+                </div>
+                <div className={style.containerHeaderLinks}>
+                    {links.map((link) => (
+                        <button key={link.label} onClick={() => {redirectTo(link.url)}}>{link.label}</button>
+                        ))}
+                    <ChangeLang />
+                </div>
+            </nav>
+        </div>
     )
 }
 

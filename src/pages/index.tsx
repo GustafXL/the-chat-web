@@ -4,9 +4,55 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-import HeaderMenu from '@/components/HeaderMenu'
+import HeaderMenu from '@/components/HeaderMenu';
+import SectionOne from '@/components/SectionOne';
+import SectionTwo from '../components/SectionTwo';
+import { useEffect } from 'react';
 
 export default function Home() {
+
+  const handleScroll = () => {
+    window.addEventListener('scroll', function(event) {
+      // var firstLocator:any = document.querySelector("#locator");
+      // const test = firstLocator.offsetTop
+              
+      // console.log('event: ', event)
+      
+      // console.log('window.pageYOffset', window.pageYOffset)
+      if(window.pageYOffset > 0 && window.pageYOffset < 100){
+        // document.querySelector("#s1").scrollIntoView();
+        console.log('scroll down')
+        window.scrollTo({top: 2040, behavior: 'smooth'});
+      }
+      
+      if(window.pageYOffset > 2040){ // presumisse que está na posição 2040 e quer ir para a posição 0
+        console.log('scroll down s3')
+        window.scrollTo({top: 4082, behavior: 'smooth'});
+      }
+      
+      if(window.pageYOffset < 2040){
+        console.log('scroll top s2')
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
+      
+      // document.querySelector("#s2").scrollIntoView();
+      
+      if(window.pageYOffset > 4082){
+        console.log('scroll top')
+        window.scrollTo({top: 2040, behavior: 'smooth'});
+        // document.querySelector("#s3").scrollIntoView();
+      }
+      
+      // if(window.pageYOffset > 2700 && window.screen.width <= 700) {
+      //     setResponsiveLayout(true)
+      // }
+  }, true);
+  }
+
+  useEffect(() => {
+    handleScroll();
+  }, [])
+
   return (
     <>
       <Head>
@@ -17,6 +63,13 @@ export default function Home() {
       </Head>
       <main>
         <HeaderMenu />
+
+        <div className={styles.containerSections}>
+          <SectionOne />
+          <SectionTwo />
+          <SectionOne />
+        </div>
+
       </main>
     </>
   )

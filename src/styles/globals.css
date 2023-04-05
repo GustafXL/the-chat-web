@@ -22,7 +22,8 @@
     rgba(255, 255, 255, 0)
   );
 
-  --light-color-theme: #efefef;
+  --color-theme: #efefef;
+  --font-color-theme: #101010;
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
@@ -121,4 +122,28 @@ h1, h2, h3, h4, h5, h6, p, span {
   max-width: var(--main-max-width) !important;
   width: 100%;
   margin: 0 auto;
+}
+
+.section-one-container {
+  display: flex;
+}
+
+.section-two-container {
+  display: flex;
+}
+
+#s {
+  padding: 40px 0 0 0;
+}
+#s1 {
+  padding: 20px 20px 2000px 20px;
+  background-color: red;
+}
+#s2 {
+  padding: 20px 20px 2000px 20px;
+  background-color: blue;
+}
+
+.mt-10 {
+  margin-top: 100px;
 }
