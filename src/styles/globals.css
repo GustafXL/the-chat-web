@@ -22,7 +22,8 @@
     rgba(255, 255, 255, 0)
   );
 
-  --light-color-theme: #efefef;
+  --color-theme: #efefef;
+  --font-color-theme: #101010;
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
@@ -84,7 +85,7 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -94,6 +95,14 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a, button, input, textarea, div, h1, h2, h3, h4, h5, h6, p, span {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  font-size: 14px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,4 +116,35 @@ a {
   max-width: var(--main-max-width) !important;
   width: 100%;
   margin: 0 auto;
+}
+
+.section-one-container {
+  display: flex;
+}
+
+.section-two-container {
+  display: flex;
+}
+
+#s {
+  padding: 40px 0 0 0;
+}
+
+#s1 {
+  height: 90vh;
+  background-color: red;
+}
+
+#s2 {
+  height: 90vh;
+  background-color: blue;
+}
+
+#s3 {
+  height: 90vh;
+  background-color: black;
+}
+
+.mt-10 {
+  margin-top: 100px;
 }

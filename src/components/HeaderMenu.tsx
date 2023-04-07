@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import style from '../styles/HeaderMenu.module.css';
+import ChangeLang from './ChangeLang';
 
 const headerMenu = () => {
     const links = [
@@ -14,20 +15,23 @@ const headerMenu = () => {
     }
 
     return (
-        <nav className={`${style.containerHeaderMenu} default-container`}>
-            <div className={style.containerImageLogo}>
-                <img
-                    className={style.imageLogo} 
-                    src='/img/logo.png' 
-                    alt="Logo" 
-                />
-            </div>
-            <ul className={style.containerHeaderLinks}>
-                {links.map((link) => (
-                    <button key={link.label} onClick={() => {redirectTo(link.url)}}>{link.label}</button>
-                ))}
-            </ul>
-      </nav>
+        <div className={style.containerHeaderMenu}>
+            <nav className={`${style.boxHeaderMenu} default-container`}>
+                <div className={style.containerImageLogo}>
+                    <img
+                        className={style.imageLogo} 
+                        src='/img/logo.png' 
+                        alt="Logo" 
+                        />
+                </div>
+                <div className={style.containerHeaderLinks}>
+                    {links.map((link) => (
+                        <button key={link.label} onClick={() => {redirectTo(link.url)}}>{link.label}</button>
+                        ))}
+                    <ChangeLang />
+                </div>
+            </nav>
+        </div>
     )
 }
 
