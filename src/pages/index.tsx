@@ -5,8 +5,6 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 import HeaderMenu from '@/components/HeaderMenu'
-import SendMessage from '@/components/Home/SendMessage'
-import ChatNow from '@/components/Home/ChatNowButton'
 import SectionOne from '@/components/SectionOne';
 import SectionTwo from '../components/SectionTwo';
 import SectionThree from '../components/SectionThree';
@@ -106,10 +104,6 @@ export default function Home() {
           <SectionThree />
         </div>
 
-      </main>
-      <main>
-        <SendMessage />
-        <ChatNow/>
       </main>
     </>
   )

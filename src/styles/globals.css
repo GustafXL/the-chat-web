@@ -120,6 +120,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .section-one-container {
   display: flex;
+  flex-direction: column;
 }
 
 .section-two-container {
@@ -132,7 +133,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 #s1 {
   height: 90vh;
-  background-color: red;
+  background-color: white;
 }
 
 #s2 {
