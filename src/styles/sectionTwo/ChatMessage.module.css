@@ -1,3 +1,33 @@
+.showChatAnimation {
+    animation: showChatAnimationEffect 0.5s ease-in-out;
+}
+
+@keyframes showChatAnimationEffect {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.showChatAnimationLeft {
+    animation: showChatAnimationEffectLeft 0.5s ease-in-out;
+}
+
+@keyframes showChatAnimationEffectLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-120%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .containerSenderMessage {
     display: flex;
     max-width: 80%;
@@ -19,29 +49,6 @@
     color: black;
 }
 
-.senderboxMessage p {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
-
 .containerReciverMessage {
     display: flex;
     max-width: 80%;
@@ -62,4 +69,29 @@
     border: 1.5px solid #BCBCBC;
     color: black;
     border-radius: 0 10px 10px 10px;
+}
+
+.blankTextArea {
+    display: flex;
+    max-width: 100%;
+    margin: 20px 0 0 0;
+    align-items: center;
+}
+
+.blankTextArea span {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.38);
+    margin: 10px;
+    height: 50px;
+}
+
+.containerSendIcon {
+    display: flex;
+    background-color: #1C92FF;
+    border-radius: 5px;
+    padding: 10px;
 }

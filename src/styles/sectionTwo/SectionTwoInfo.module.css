@@ -1,0 +1,36 @@
+.titleSectionTwoInfo {
+    font-size: 2rem !important;
+    color: #363636;
+}
+
+.containerBoxesInfo {
+    display: flex;
+}
+
+.lineInfo {
+    display: flex;
+    width: 300px;
+    height: 5px;
+    border-radius: 100px;
+    border: none;
+    background-color: #EE7C83;
+    margin: 50px 0 50px 0;
+}
+
+.boxInfo {
+    display: block;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 20px 0 0;
+    background: linear-gradient(125deg, rgba(249,168,165,1) 0%, rgba(226,138,134,1) 100%);
+    max-width: 40%;
+    width: 100%;
+}
+
+.boxInfoTitle {
+    font-size: 50px;
+}
+
+.boxInfoText {
+    font-size: 16px;
+}

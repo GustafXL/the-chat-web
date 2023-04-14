@@ -1,3 +1,7 @@
+import React, { useEffect, useState } from 'react';
+
+import { BsFillSendFill } from 'react-icons/bs'
+
 export interface ChatMessageProps {
     message: string;
     sender: string;
@@ -8,10 +12,20 @@ export interface Iprops {
 }
 
 import style from '../../../styles/sectionTwo/ChatMessage.module.css'
-import {HiUserCircle} from 'react-icons/hi'
 
-const chatMessage = (props: Iprops) => {
-    console.log(props)
+const ChatMessage = (props: Iprops) => {
+    const [effect, setEffect] = useState(0);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setEffect(1);
+        }, 400)
+
+        setTimeout(() => {
+            setEffect(2);
+        }, 700)
+    }, [])
+
     return (
         <div>
             {
@@ -20,14 +34,16 @@ const chatMessage = (props: Iprops) => {
                         <div key={index} className={style.containerChat}>
                             {
                                 item.sender === 'sender' ? (
-                                    <div className={style.containerSenderMessage}>
+                                    <div className={`${effect === index ? style.showChatAnimation : ''} ${style.containerSenderMessage}`}>
+
                                         <div className={style.senderboxMessage}>
                                             <p>{item.message}</p>
                                         </div>
                                         <img src="/img/user-pic-1.png" alt="" />
+                                    
                                     </div>
                                 ) : (
-                                    <div className={style.containerReciverMessage}>
+                                    <div className={`${effect === index ? style.showChatAnimationLeft : ''} ${style.containerReciverMessage}`}>
                                         <div className={style.reciverboxMessage}>
                                             <p>{item.message}</p>
                                         </div>
@@ -39,8 +55,15 @@ const chatMessage = (props: Iprops) => {
                     )
                 })
             }
+            
+            <div className={style.blankTextArea}>
+                <span></span>
+                <div className={style.containerSendIcon}>
+                    <BsFillSendFill size={25} />
+                </div>
+            </div>
         </div>
     )
 }
 
-export default chatMessage;
+export default ChatMessage;
