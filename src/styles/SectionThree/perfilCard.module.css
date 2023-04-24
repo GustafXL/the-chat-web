@@ -1,0 +1,55 @@
+.cardPictureContaineer {
+    
+}
+
+.cardPictureContaineer img {
+    border-radius: 15px;
+}
+
+.containerPictureText {
+    display: flex;
+}
+
+.cardTextContaineer {
+    display: flex;
+    border: 3px solid #EE9591;
+    box-shadow: -10px -10px 0px #EE9591;
+    max-width: 100%;
+    width: 15%;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 999999;
+    position: absolute;
+    margin: 150px 0 0 180px;
+    background: #fff;
+    color: black;
+}
+
+.cardTextContaineer:nth-child(1) {
+    margin: 150px 0 0 180px;
+    background-color: red !important;
+}
+
+.cardTextContaineer p {
+    font-size: 20px !important;
+}
+
+.containerContactCard {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    border: 3px solid #EE9591;
+    box-shadow: -10px -10px 0px #EE9591;
+    border-radius: 10px;
+    padding: 15px;
+    color: black;
+    margin: 50px 0 0 0;
+    justify-content: space-around;
+}
+
+.containerContactCard a {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}

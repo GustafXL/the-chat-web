@@ -127,6 +127,11 @@ h1, h2, h3, h4, h5, h6, p, span {
   display: flex;
 }
 
+.section-three-container {
+  display: flex;
+  margin: 100px 0 0 0;
+}
+
 #s {
   padding: 40px 0 0 0;
 }
@@ -143,7 +148,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 #s3 {
   height: 90vh;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .mt-10 {
