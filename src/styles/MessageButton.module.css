@@ -9,9 +9,8 @@
     cursor: pointer;
 }
 .ButtonMessageContent {
-    width: 400px;
-    max-width: 100%;
-    width: 960px;
-    max-width: 100%;
     margin: 10px auto;
+    position: absolute;
+    top: 60%;
+    left: 12%;
 }

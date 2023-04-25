@@ -7,6 +7,7 @@ const SendMessage = () => {
             <p className={style.sendMessageText}>
                 Mandar mensagens nunca foi tão fácil<span className={style.dotText}>.</span>
             </p>
+            <img src="/img/cellphone.png" alt="cellphone" />
         </div>
     )
 }
